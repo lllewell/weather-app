@@ -6,7 +6,25 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/journal/bootstrap.min.css">
 </head>
-<body>
+<body class="mb-3 p-3">
+    <h1>Weather Dashboard</h1>
+    <form class="row" id="search-form">
+        <div class="col-4 mb-3 p-3">
+            <input class="form-control" type="text" id="query" name="query" placeholder="Search for a city's weather!">
+            <button class="btn btn-info" type="submit">Submit</button>
+        </div>
+    </form>
+    <main>
+        <div class="row" id="results">
+            <div class="col-4">
+                <div class="card p-3 m-3">
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
 
 <script src="script.js"></script>
 </body>
