@@ -29,9 +29,9 @@ searchForm.addEventListener('submit', function (event){
             cardEl.className = 'card p-3 m-3';
             dateEl.textContent = dayjs('2024-06-09 15:00:00').format('MM/DD/YYYY', list.dt_txt);
             iconEl.textContent = list.weather.icon;
-            tempEl.textContent = ('Temp: ' + list.main.temp);
-            windSpeedEl.textContent = ('Wind Speed: ' + list.wind.speed);
-            humidityEl.textContent = ('Humidity: ' + list.main.humidity);
+            tempEl.textContent = ('Temp: ' + list.main.temp + '°F');
+            windSpeedEl.textContent = ('Wind Speed: ' + list.wind.speed + 'mph');
+            humidityEl.textContent = ('Humidity: ' + list.main.humidity + '%');
 
             columnEl.appendChild(cardEl);
             cardEl.appendChild(dateEl);
