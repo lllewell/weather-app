@@ -35,6 +35,7 @@ searchForm.addEventListener('submit', function (event){
 
             columnEl.appendChild(cardEl);
             cardEl.appendChild(dateEl);
+            // Icon not showing up for some reason
             cardEl.appendChild(iconEl);
             cardEl.appendChild(tempEl);
             cardEl.appendChild(windSpeedEl);
