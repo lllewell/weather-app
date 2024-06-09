@@ -7,7 +7,7 @@ searchForm.addEventListener('submit', function (event){
 
     const q = queryInput.value.trim();
     
-
+// API is still only for 5 days at 3 hour intervals, need to figure out how to get the five day forecast
     fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + q + '&appid=b4b4f7d3e6c6628438377015d4c26f2e&units=imperial&cnt=5')
     .then(function (response) {
         return response.json();
