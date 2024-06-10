@@ -24,16 +24,23 @@ searchForm.addEventListener('submit', function (event){
             const tempEl = document.createElement('p');
             const windSpeedEl = document.createElement('p');
             const humidityEl = document.createElement('p');
+            // History aside and button aren't showing up on page, need to troubleshoot
+            const historyButton = document.createElement('button');
+            const historyAside = document.createElement('aside');
   
             columnEl.className = 'col-6';
             cardEl.className = 'card p-3 m-3';
+            historyAside.className = "col-4 p-2 m-2";
             dateEl.textContent = dayjs('2024-06-09 15:00:00').format('MM/DD/YYYY', list.dt_txt);
             iconEl.textContent = list.weather.icon;
             tempEl.textContent = ('Temp: ' + list.main.temp + '°F');
             windSpeedEl.textContent = ('Wind Speed: ' + list.wind.speed + 'mph');
             humidityEl.textContent = ('Humidity: ' + list.main.humidity + '%');
+            historyButton.textContent = q;
+            historyAside.textContent = historyButton;
 
             columnEl.appendChild(cardEl);
+            columnEl.appendChild(historyAside);
             cardEl.appendChild(dateEl);
             // Icon not showing up for some reason
             cardEl.appendChild(iconEl);
@@ -41,6 +48,7 @@ searchForm.addEventListener('submit', function (event){
             cardEl.appendChild(windSpeedEl);
             cardEl.appendChild(humidityEl);
             resultsList.appendChild(cardEl);
+            historyAside.appendChild(historyButton);
         }
     })
     .catch(function (err) {
