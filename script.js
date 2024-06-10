@@ -23,6 +23,7 @@ searchForm.addEventListener('submit', function (event) {
                 const cardEl = document.createElement('div');
                 const dateEl = document.createElement('h3');
                 const iconEl = document.createElement('img');
+                // const iconElurl = 'https://openweathermap.org/img/wn/10d@2x.png'
                 const tempEl = document.createElement('p');
                 const windSpeedEl = document.createElement('p');
                 const humidityEl = document.createElement('p');
@@ -32,9 +33,9 @@ searchForm.addEventListener('submit', function (event) {
 
                 columnEl.className = 'col-6';
                 cardEl.className = 'card p-3 m-3';
-                historyAside.className = "col-4 p-2 m-2";
+                historyAside.className = 'col-4 p-2 m-2';
                 dateEl.textContent = dayjs(list.dt_txt).format('MM/DD/YYYY');
-                iconEl.textContent = list.weather.icon;
+                iconEl = list.weather.icon;
                 tempEl.textContent = ('Temp: ' + list.main.temp + '°F');
                 windSpeedEl.textContent = ('Wind Speed: ' + list.wind.speed + 'mph');
                 humidityEl.textContent = ('Humidity: ' + list.main.humidity + '%');
